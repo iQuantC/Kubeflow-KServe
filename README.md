@@ -111,7 +111,7 @@ kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8080:80 &
 #### Run this ssh tunnel coommand in a separate terminal
 ```sh
 cd Downloads
-ssh -i mlops-keypair.pem -L 8080:localhost:8080 -N ubuntu@<Public_ip>
+ssh -i <keypair> -L 8080:localhost:8080 -N ubuntu@<Public_ip>
 ```
 
 
@@ -125,9 +125,9 @@ localhost:8080
 ```sh
 source path/to/venv/bin/activate
 
-touch kubeflow_pipeline_serve.py
-path/to/venv/bin/python kubeflow_pipeline_serve.py
-path/to/venv/bin/kfp pipeline create -p IrisProject kubeflow_pipeline_serve.yaml
+touch pipeline.py
+path/to/venv/bin/python pipeline.py
+path/to/venv/bin/kfp pipeline create -p IrisProject pipeline.yaml
 ```
 
 
@@ -215,8 +215,6 @@ export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -
 kubectl create namespace kserve-test
 ```
 
-s3://kubeflow-bucket-iquant00/models/iris/kube/model_20250327_023241/model.joblib
-gs://kfserving-examples/models/sklearn/1.0/model
 
 ## Create InferenceService 
 ```sh
