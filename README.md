@@ -1,5 +1,8 @@
 # MLOPS: Deploying ML Model using Kubeflow Pipeline, KServe & Kubernetes
 
+## YouTube Link
+Click here for full video: [click here](https://youtu.be/TQypOccQ3lc?si=MZnI5JtQmtQ6QDEI)
+
 ## Requirements
 1. Docker Desktop (on Mac & Windows) or Docker Engine (on Linux)
 2. Kubectl
@@ -21,14 +24,14 @@ ssh -i <keypair> ubuntu@<PublicIP>
 ```
 
 ## Open the following Ports in Inbound Rules for Smooth Operation
-Port 22:                ssh
-Port 80, 443:           http & https
-Port 8443:              Kubernetes API
-Port 8080:              Kubeflow Dashboard
-Port 30000-32767:       Kubernetes NodePort Service
-Port 5000, 8081, 9000:  KServe Model Serving
-Port 31390:             KServe Inference
-Port 31380:             Kubeflow Ingress Gateway
+1. Port 22:                ssh
+2. Port 80, 443:           http & https
+3. Port 8443:              Kubernetes API
+4. Port 8080:              Kubeflow Dashboard
+5. Port 30000-32767:       Kubernetes NodePort Service
+6. Port 5000, 8081, 9000:  KServe Model Serving
+7. Port 31390:             KServe Inference
+8. Port 31380:             Kubeflow Ingress Gateway
 
 
 ## Update the System
@@ -132,11 +135,9 @@ path/to/venv/bin/kfp pipeline create -p IrisProject pipeline.yaml
 
 
 ## Set Up AWS User and Access Keys  
-IAM -> Create User -> Attach Policy directly (AmazonS3FullAccess) -> Create User
-
-Click on Newly Created User -> Create Access Keys -> CLI -> Create Access Keys -> Download .csv file -> Done
-
-Configure AWS User on local terminal with Access Key ID & Secret Key ID using "aws configure"
+1. IAM -> Create User -> Attach Policy directly (AmazonS3FullAccess) -> Create User
+2. Click on Newly Created User -> Create Access Keys -> CLI -> Create Access Keys -> Download .csv file -> Done
+3. Configure AWS User on local terminal with Access Key ID & Secret Key ID using "aws configure"
 
 
 ## Create S3 Bucket
