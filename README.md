@@ -1,4 +1,5 @@
 # MLOPS: Deploying ML Model using Kubeflow Pipeline, KServe & Kubernetes
+In this video, we’ll walk you through building a powerful machine learning model using Kubeflow and deploying it seamlessly to KServe with InferenceService! 
 
 ## YouTube Link
 Click here for full video: [click here](https://youtu.be/TQypOccQ3lc?si=MZnI5JtQmtQ6QDEI)
